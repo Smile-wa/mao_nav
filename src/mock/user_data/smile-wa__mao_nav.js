@@ -423,7 +423,271 @@ export const mockData = {
           name: "豆包",
           url: "https://www.doubao.com/chat/",
           description: null,
-          icon: "data:image/png;base64,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 in640,448 0 0,0 -640,-448 z"
+          icon: "https://favicon.im/www.doubao.com?larger=true"
+        },
+        {
+          id: "41",
+          name: "千问",
+          url: "https://www.qianwen.com/",
+          description: "千问智能AI",
+          icon: "https://favicon.im/qianwen.com?larger=true"
+        },
+        {
+          id: "42",
+          name: "DeepSeek",
+          url: "https://chat.deepseek.com/sign_in",
+          description: null,
+          icon: "https://favicon.im/chat.deepseek.com?larger=true"
+        },
+        {
+          id: "43",
+          name: "智谱清言",
+          url: "https://chatglm.cn/main/alltoolsdetail?redirect=/main/alltoolsdetail&lang=zh",
+          description: null,
+          icon: "https://favicon.im/chatglm.cn?larger=true"
+        },
+        {
+          id: "44",
+          name: "百度文心助手",
+          url: "https://wenxin.baidu.com/?enter_type=yiyan_site",
+          description: null,
+          icon: "https://cloudimgs.xwgt.xyz/api/images/%E5%9B%BE%E6%A0%87/%E9%97%AE%E5%BF%83.png"
+        },
+        {
+          id: "48",
+          name: "WorkBuddy",
+          url: "https://workbuddy.cn/app",
+          description: null,
+          icon: "https://favicon.im/workbuddy.cn?larger=true"
+        }
+      ]
+    },
+    {
+      id: "30",
+      name: "生活娱乐",
+      icon: "🎮",
+      order: 7,
+      sites: [
+        {
+          id: "5",
+          name: "道理鱼",
+          url: "https://daoliyu.xwgt.xyz/",
+          description: "音乐服务",
+          icon: "https://daoliyu.cn/api/uploads/branding/1775217643878-R-uBj8yk.webp"
+        },
+        {
+          id: "23",
+          name: "Tunescout",
+          url: "https://tunescout.xwgt.xyz",
+          description: "音乐刮削",
+          icon: "data:image/svg+xml;charset=utf-8,<svg xmlns%3D'http://www.w3.org/2000/svg' width%3D'512' height%3D'512' viewBox%3D'0 0 512 512'>%0A  <rect width%3D'512' height%3D'512' rx%3D'80' ry%3D'80' fill%3D'%23E53E3E'/>%0A  <text x%3D'50%25' y%3D'193.57' dominant-baseline%3D'middle' text-anchor%3D'middle' fill%3D'%23FFFFFF' font-size%3D'115.61' font-weight%3D'normal' font-family%3D'Impact%2CImpactFallback%2CArial Black%2CArial%2CHelvetica%2Csans-serif'>Tunesc</text><text x%3D'50%25' y%3D'318.43' dominant-baseline%3D'middle' text-anchor%3D'middle' fill%3D'%23FFFFFF' font-size%3D'115.61' font-weight%3D'normal' font-family%3D'Impact%2CImpactFallback%2CArial Black%2CArial%2CHelvetica%2Csans-serif'>out</text>%0A</svg>"
+        },
+        {
+          id: "18",
+          name: "Navidrome",
+          url: "https://navidrome.xwgt.xyz",
+          description: "音乐服务器",
+          icon: "https://api.iconify.design/selfhst/navidrome.svg"
+        },
+        {
+          id: "14",
+          name: "Joiflix",
+          url: "https://joyflix.xwgt.xyz",
+          description: null,
+          icon: "https://favicon.im/joyflix.xwgt.xyz?larger=true"
+        },
+        {
+          id: "37",
+          name: "Go-Music-Dl",
+          url: "https://musicdw.xwgt.xyz",
+          description: "音乐下载",
+          icon: "https://api.iconify.design/emojione-v1/music-ascend.svg"
+        },
+        {
+          id: "54",
+          name: "哔哩哔哩",
+          url: "https://www.bilibili.com/",
+          description: null,
+          icon: "https://favicon.im/bilibili.com?larger=true"
+        },
+        {
+          id: "76",
+          name: "SongLoft",
+          url: "https://songloft.xwgt.xyz",
+          description: null,
+          icon: "https://api.iconify.design/simple-icons/songloft.svg"
+        }
+      ]
+    },
+    {
+      id: "10",
+      name: "邮箱&网盘",
+      icon: "💌",
+      order: 8,
+      sites: [
+        {
+          id: "63",
+          name: "网易免费邮",
+          url: "https://mail.163.com/",
+          description: null,
+          icon: "https://favicon.im/mail.163.com?larger=true"
+        },
+        {
+          id: "64",
+          name: "Outlook",
+          url: "https://www.microsoft.com/zh-cn/microsoft-365/outlook/log-in",
+          description: null,
+          icon: "https://favicon.im/microsoft.com?larger=true"
+        },
+        {
+          id: "65",
+          name: "QQ邮箱",
+          url: "https://mail.qq.com/",
+          description: null,
+          icon: "https://favicon.im/mail.qq.com?larger=true"
+        },
+        {
+          id: "80",
+          name: "115网盘",
+          url: "https://www.115.com",
+          description: null,
+          icon: "https://favicon.im/115.com?larger=true"
+        },
+        {
+          id: "81",
+          name: "夸克网盘",
+          url: "https://pan.quark.cn/",
+          description: null,
+          icon: "https://favicon.im/pan.quark.cn?larger=true"
+        },
+        {
+          id: "82",
+          name: "阿里云盘",
+          url: "https://www.alipan.com/",
+          description: null,
+          icon: "https://favicon.im/alipan.com?larger=true"
+        },
+        {
+          id: "83",
+          name: "百度网盘",
+          url: "https://pan.baidu.com/",
+          description: null,
+          icon: "https://favicon.im/pan.baidu.com?larger=true"
+        }
+      ]
+    },
+    {
+      id: "29",
+      name: "软件仓库",
+      icon: "💾",
+      order: 9,
+      sites: [
+        {
+          id: "9",
+          name: "魔戒",
+          url: "https://mojie.ws",
+          description: null,
+          icon: "https://favicon.im/mojie.ws?larger=true"
+        },
+        {
+          id: "16",
+          name: "青龙仓库",
+          url: "https://qinglong.xiaodecheji.com/",
+          description: "呆呆面板脚本仓库",
+          icon: "https://www.xiaodecheji.com/static/upload/album/6a26c1e8e4b00954e79c0214.png"
+        },
+        {
+          id: "56",
+          name: "软仓",
+          url: "https://www.ruancang.net/",
+          description: "软件仓库",
+          icon: "https://favicon.im/ruancang.net?larger=true"
+        },
+        {
+          id: "60",
+          name: "Xterminal",
+          url: "https://www.terminal.icu/",
+          description: "SSH连接工具",
+          icon: "https://favicon.im/terminal.icu?larger=true"
+        },
+        {
+          id: "66",
+          name: "油猴脚本",
+          url: "https://greasyfork.org/zh-CN",
+          description: null,
+          icon: "https://favicon.im/greasyfork.org?larger=true"
+        }
+      ]
+    },
+    {
+      id: "26",
+      name: "设计素材",
+      icon: "🎯",
+      order: 10,
+      sites: [
+        {
+          id: "39",
+          name: "Color Hunt",
+          url: "https://colorhunt.co/",
+          description: "颜色搭配",
+          icon: "https://favicon.im/colorhunt.co?larger=true"
+        },
+        {
+          id: "11",
+          name: "壁纸社区",
+          url: "https://haowallpaper.com/wallpaperForum",
+          description: null,
+          icon: "https://favicon.im/haowallpaper.com?larger=true"
+        },
+        {
+          id: "46",
+          name: "彼岸图网",
+          url: "https://pic.netbian.com",
+          description: null,
+          icon: "https://favicon.im/pic.netbian.com?larger=true"
+        },
+        {
+          id: "58",
+          name: "小土豆国漫壁纸",
+          url: "https://www.guomanbizhi.com/",
+          description: null,
+          icon: "data:image/svg+xml;charset=utf-8,<svg xmlns%3D'http://www.w3.org/2000/svg' width%3D'512' height%3D'512' viewBox%3D'0 0 512 512'>%0A  <rect width%3D'512' height%3D'512' rx%3D'80' ry%3D'80' fill%3D'%23E53E3E'/>%0A  <text x%3D'50%25' y%3D'110.08' dominant-baseline%3D'middle' text-anchor%3D'middle' fill%3D'%23FFFFFF' font-size%3D'97.28' font-weight%3D'normal' font-family%3D'Impact%2CImpactFallback%2CArial Black%2CArial%2CHelvetica%2Csans-serif'>%E5%B0%8F%E5%9C%9F</text><text x%3D'50%25' y%3D'207.36' dominant-baseline%3D'middle' text-anchor%3D'middle' fill%3D'%23FFFFFF' font-size%3D'97.28' font-weight%3D'normal' font-family%3D'Impact%2CImpactFallback%2CArial Black%2CArial%2CHelvetica%2Csans-serif'>%E8%B1%86%E5%9B%BD</text><text x%3D'50%25' y%3D'304.64' dominant-baseline%3D'middle' text-anchor%3D'middle' fill%3D'%23FFFFFF' font-size%3D'97.28' font-weight%3D'normal' font-family%3D'Impact%2CImpactFallback%2CArial Black%2CArial%2CHelvetica%2Csans-serif'>%E6%BC%AB%E5%A3%81</text><text x%3D'50%25' y%3D'401.92' dominant-baseline%3D'middle' text-anchor%3D'middle' fill%3D'%23FFFFFF' font-size%3D'97.28' font-weight%3D'normal' font-family%3D'Impact%2CImpactFallback%2CArial Black%2CArial%2CHelvetica%2Csans-serif'>%E7%BA%B8</text>%0A</svg>"
+        },
+        {
+          id: "67",
+          name: "XiuRenBox",
+          url: "https://www.xiurenbox.com/",
+          description: null,
+          icon: "data:image/svg+xml;charset=utf-8,<svg xmlns%3D'http://www.w3.org/2000/svg' width%3D'512' height%3D'512' viewBox%3D'0 0 512 512'>%0A  <rect width%3D'512' height%3D'512' rx%3D'80' ry%3D'80' fill%3D'%23000000'/>%0A  <text x%3D'50%25' y%3D'193.57' dominant-baseline%3D'middle' text-anchor%3D'middle' fill%3D'%23FFA31A' font-size%3D'115.61' font-weight%3D'normal' font-family%3D'Impact%2CImpactFallback%2CArial Black%2CArial%2CHelvetica%2Csans-serif'>XiuRen</text><text x%3D'50%25' y%3D'318.43' dominant-baseline%3D'middle' text-anchor%3D'middle' fill%3D'%23FFA31A' font-size%3D'115.61' font-weight%3D'normal' font-family%3D'Impact%2CImpactFallback%2CArial Black%2CArial%2CHelvetica%2Csans-serif'>Box</text>%0A</svg>"
+        },
+        {
+          id: "78",
+          name: "Iconify",
+          url: "https://icon-sets.iconify.design/",
+          description: "图标网站",
+          icon: "https://favicon.im/icon-sets.iconify.design?larger=true"
+        }
+      ]
+    },
+    {
+      id: "33",
+      name: "导航收藏",
+      icon: "🧭",
+      order: 11,
+      sites: [
+        {
+          id: "70",
+          name: "酷啦鱼",
+          url: "https://www.kulayu.com/",
+          description: null,
+          icon: "https://favicon.im/kulayu.com?larger=true"
+        },
+        {
+          id: "79",
+          name: "聚点导航",
+          url: "https://navs.wxyu.qzz.io/",
+          description: null,
+          icon: "https://favicon.im/navs.wxyu.qzz.io?larger=true"
         }
       ]
     }
