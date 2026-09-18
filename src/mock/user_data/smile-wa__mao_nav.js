@@ -210,6 +210,13 @@ export const mockData = {
           "url": "https://www.gname.net/",
           "description": "免费域名注册",
           "icon": "https://www.faviconextractor.com/favicon/www.gname.net"
+        },
+        {
+          "id": "site-1789752689250",
+          "name": "DigitalPlat",
+          "url": "https://dashboard.digitalplat.org/auth/login",
+          "description": "二级免费域名注册",
+          "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPgoJPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9IiM0Mjg1ZjQiIGQ9Ik0xMyAxOGgtMlY4aDJ6IiAvPgoJPHBhdGggZmlsbD0iIzY2OWRmNiIgZD0iTTIgMjFoMjB2LTJIMnoiIC8+Cgk8cGF0aCBmaWxsPSIjYWVjYmZhIiBkPSJNMTAgMjJoNHYtNGgtNHpNMiAyaDIwdjZIMnoiIC8+Cgk8cGF0aCBmaWxsPSIjNjY5ZGY2IiBkPSJNMTIgMmgxMHY2SDEyeiIgLz4KCTxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik00IDRoMnYySDR6IiAvPgoJPHBhdGggZmlsbD0iI2FlY2JmYSIgZD0iTTIgMTBoMjB2NkgyeiIgLz4KCTxwYXRoIGZpbGw9IiM2NjlkZjYiIGQ9Ik0xMiAxMGgxMHY2SDEyeiIgLz4KCTxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik00IDEyaDJ2Mkg0eiIgLz4KPC9zdmc+Cg=="
         }
       ]
     },
