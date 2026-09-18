@@ -85,6 +85,13 @@ export const mockData = {
           "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPgoJPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9IiMxZTM3ZmMiIGQ9Ik01LjMxIDE1Ljc1NmMuMTcyLTMuNzUgMS44ODMtNS45OTkgMi41NDktNi43MzljLTMuMjYgMi4wNTgtNS40MjUgNS42NTgtNi4zNTggOC4zMDh2MS4xMkMxLjUwMSAyMS41MTMgNC4yMjYgMjQgNy41OSAyNGE2LjYgNi42IDAgMCAwIDIuMi0uMzc1cS41My0uMTgxIDEuMDM5LS4zNzhhMTIuOCAxMi44IDAgMCAwIDIuMjQzLTIuOTkyYy00Ljg3NyAyLjQzMS03Ljk3NC4wNzItNy43NjMtNC41eiIgLz4KCTxwYXRoIGZpbGw9IiMzN2UxYmUiIGQ9Ik0yMi41NyAxMC4yODNjLTEuMjEyLS45MDEtNC4xMDktMi40MDQtNy4zOTctMi44Yy4yOTUgMy43OTIuMDkzIDguNzY2LTIuMSAxMi43NzNhMTIuOCAxMi44IDAgMCAxLTIuMjQ0IDIuOTkyYzMuNzY0LTEuNDQ4IDYuNzQ2LTMuNDU3IDguNTk2LTUuMjE5YzIuODItMi42ODMgMy4zNTMtNS4xNzggMy4zNjEtNi42NmEyLjcgMi43IDAgMCAwLS4yMTYtMS4wODR6IiAvPgoJPHBhdGggZmlsbD0iI2E1NjlmZiIgZD0iTTE0LjMwMyAxLjg2N0MxMi45NTUuNyAxMS4yNDggMCA5LjM5IDBTNS44ODMuNjc3IDQuNTQ1IDEuODA3QzIuNzkxIDMuMjkgMS42MjcgNS41NTcgMS41IDguMTI1djkuMjAxYy45MzItMi42NSAzLjA5Ny02LjI1IDYuMzU3LTguMzA3cS43NTEtLjQ3NyAxLjU2OS0uODI5YzEuODgzLS44MDEgMy44NzgtLjkzMiA1Ljc0Ni0uNzA2Yy0uMjIyLTIuODMtLjcxOC01LjAwMi0uODctNS42MTd6IiAvPgoJPHBhdGggZmlsbD0iIzFlMzdmYyIgZD0iTTE3LjMwNSA0Ljk2MWEyMDAgMjAwIDAgMCAxLTEuMDgtMS4wOTRxLS4zMDMtLjMxOS0uNTg2LS42MjJsLTEuMzMzLTEuMzc4Yy4xNTEuNjE1LjY0OCAyLjc4Ni44NjkgNS42MTdjMy4yODguMzk1IDYuMTg1IDEuODk4IDcuMzk2IDIuOGMtMS4zMDYtMS4yNzUtMy40NzUtMy40ODctNS4yNjYtNS4zMjMiIC8+Cjwvc3ZnPgo="
         },
         {
+          "id": "site-1789751773843",
+          "name": "DeepSeek",
+          "url": "https://chat.deepseek.com/",
+          "description": "正版DeepSeek",
+          "icon": "https://www.faviconextractor.com/favicon/chat.deepseek.com"
+        },
+        {
           "id": "chatgpt",
           "name": "ChatGPT",
           "url": "https://chat.openai.com",
