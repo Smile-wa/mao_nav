@@ -149,11 +149,39 @@ export const mockData = {
       "order": 3,
       "sites": [
         {
+          "id": "tencent-cloud",
+          "name": "腾讯云",
+          "url": "https://cloud.tencent.com",
+          "description": "腾讯云计算服务",
+          "icon": "/sitelogo/cloud.tencent.com.ico"
+        },
+        {
+          "id": "aliyun",
+          "name": "阿里云",
+          "url": "https://www.aliyun.com",
+          "description": "阿里巴巴云计算",
+          "icon": "/sitelogo/www.aliyun.com.ico"
+        },
+        {
+          "id": "huawei-cloud",
+          "name": "华为云",
+          "url": "https://www.huaweicloud.com",
+          "description": "华为云计算服务",
+          "icon": "/sitelogo/www.huaweicloud.com.ico"
+        },
+        {
           "id": "cloudflare",
           "name": "Cloudflare",
           "url": "https://www.cloudflare.com",
           "description": "全球CDN和网络安全服务",
           "icon": "/sitelogo/www.cloudflare.com.ico"
+        },
+        {
+          "id": "site-1789752396243",
+          "name": "EdgeOne",
+          "url": "https://edgeone.ai/zh/login?s_url=https://edgeone.ai/get-free-plan",
+          "description": "安全、快速下一代边缘平台",
+          "icon": "https://www.faviconextractor.com/favicon/edgeone.ai"
         },
         {
           "id": "vercel",
@@ -170,32 +198,18 @@ export const mockData = {
           "icon": "/sitelogo/aws.amazon.com.ico"
         },
         {
-          "id": "aliyun",
-          "name": "阿里云",
-          "url": "https://www.aliyun.com",
-          "description": "阿里巴巴云计算",
-          "icon": "/sitelogo/www.aliyun.com.ico"
-        },
-        {
-          "id": "tencent-cloud",
-          "name": "腾讯云",
-          "url": "https://cloud.tencent.com",
-          "description": "腾讯云计算服务",
-          "icon": "/sitelogo/cloud.tencent.com.ico"
-        },
-        {
-          "id": "huawei-cloud",
-          "name": "华为云",
-          "url": "https://www.huaweicloud.com",
-          "description": "华为云计算服务",
-          "icon": "/sitelogo/www.huaweicloud.com.ico"
-        },
-        {
           "id": "site-1752644060499",
           "name": "怕死云",
           "url": "https://www.pasyun.com/",
           "description": "ipv6机器",
           "icon": "/sitelogo/www.pasyun.com.ico"
+        },
+        {
+          "id": "site-1789752461146",
+          "name": "GNAME",
+          "url": "https://www.gname.net/",
+          "description": "免费域名注册",
+          "icon": "https://www.faviconextractor.com/favicon/www.gname.net"
         }
       ]
     },
@@ -253,28 +267,6 @@ export const mockData = {
           "url": "https://mail.chatgpt.org.uk/",
           "description": "免费邮箱站点",
           "icon": "https://www.faviconextractor.com/favicon/mail.chatgpt.org.uk"
-        }
-      ]
-    },
-    {
-      "id": "category-1774510899116",
-      "icon": "☠️",
-      "name": "DDDD",
-      "order": 5,
-      "sites": [
-        {
-          "id": "site-1774510993770",
-          "name": "RiskTest",
-          "url": "https://risk.copolits.com/",
-          "description": "检测风控",
-          "icon": "https://www.faviconextractor.com/favicon/risk.copolits.com"
-        },
-        {
-          "id": "site-1774511036557",
-          "name": "虚拟地址",
-          "url": "https://ip-geoaddress-generator.pages.dev/",
-          "description": "获取当前ip地址",
-          "icon": "https://www.faviconextractor.com/favicon/ip-geoaddress-generator.pages.dev"
         }
       ]
     },
@@ -354,70 +346,6 @@ export const mockData = {
           "url": "https://www.adobe.com/products/xd.html",
           "description": "用户体验设计工具",
           "icon": "/sitelogo/www.adobe.com.ico"
-        }
-      ]
-    },
-    {
-      "id": "finance",
-      "name": "财经投资",
-      "icon": "💰",
-      "order": 8,
-      "sites": [
-        {
-          "id": "binance",
-          "name": "币安",
-          "url": "https://www.binance.com",
-          "description": "加密货币交易平台",
-          "icon": "/sitelogo/www.binance.com.ico"
-        },
-        {
-          "id": "okx",
-          "name": "OKX",
-          "url": "https://www.okx.com",
-          "description": "数字资产交易服务平台",
-          "icon": "/sitelogo/www.okx.com.ico"
-        },
-        {
-          "id": "bitget",
-          "name": "Bitget",
-          "url": "https://www.bitget.com",
-          "description": "全球化数字资产交易服务商",
-          "icon": "/sitelogo/www.bitget.com.ico"
-        },
-        {
-          "id": "tradingview",
-          "name": "TradingView",
-          "url": "https://cn.tradingview.com",
-          "description": "专业金融图表和交易平台",
-          "icon": "/sitelogo/cn.tradingview.com.ico"
-        },
-        {
-          "id": "tonghuashun",
-          "name": "同花顺",
-          "url": "https://www.10jqka.com.cn",
-          "description": "专业股票软件及金融信息服务",
-          "icon": "/sitelogo/www.10jqka.com.cn.ico"
-        },
-        {
-          "id": "xueqiu",
-          "name": "雪球",
-          "url": "https://xueqiu.com",
-          "description": "聪明的投资者都在这里",
-          "icon": "/sitelogo/xueqiu.com.ico"
-        },
-        {
-          "id": "coinbase",
-          "name": "Coinbase",
-          "url": "https://www.coinbase.com",
-          "description": "美国合规加密货币交易平台",
-          "icon": "/sitelogo/www.coinbase.com.ico"
-        },
-        {
-          "id": "futu",
-          "name": "富途牛牛",
-          "url": "https://www.futunn.com",
-          "description": "港美股交易软件",
-          "icon": "/sitelogo/www.futunn.com.ico"
         }
       ]
     },
@@ -530,7 +458,7 @@ export const mockData = {
       ]
     }
   ],
-  "title": "云端书柜",
+  "title": "猫猫导航🐱",
   "search": "bing",
   "icp": ""
 }
