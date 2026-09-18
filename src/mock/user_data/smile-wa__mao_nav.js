@@ -21,6 +21,13 @@ export const mockData = {
           "icon": "https://www.faviconextractor.com/favicon/it-tools.xwtx.eu.cc"
         },
         {
+          "id": "site-1789750991844",
+          "name": "OmniTools",
+          "url": "https://tool.xwgt.xyz/",
+          "description": "一款快速完成任务的终极工具包！",
+          "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMTYgMTYiPgoJPHBhdGggZD0iTTAgMGgxNnYxNkgweiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9IiMxZTg4ZTUiIGQ9Im02LjkyMiAzLjc2OGwtLjY0NC0uNTM2QTEgMSAwIDAgMCA1LjYzOCAzSDJhMSAxIDAgMCAwLTEgMXY4YTEgMSAwIDAgMCAxIDFoMTJhMSAxIDAgMCAwIDEtMVY1YTEgMSAwIDAgMC0xLTFINy41NjJhMSAxIDAgMCAxLS42NC0uMjMyIiAvPgoJPHBhdGggZmlsbD0iI2JiZGVmYiIgZD0iTTEyLjE4MiA5LjUwNkw2LjY4MiAxNUw2IDE0LjMxOWw1LjQ5NC01LjVabTIuMTgyLTEuNDA4bC4yODctLjI4OGwtLjM4NS0uMzg0bC4zMTItLjMxMmwtLjY5Mi0uNjkxbC0uMzExLjMxMWwtLjM4NS0uMzg1bC0uMjg3LjI4OEExMC4zIDEwLjMgMCAwIDAgMTAuMDc4IDVsLS40MDUuODcyYTEyLjMgMTIuMyAwIDAgMSAyLjM2OCAxLjYyN2wtLjI0NC4yNDRsMS40NjEgMS40NjFsLjI0NC0uMjQ0YTEyLjMgMTIuMyAwIDAgMSAxLjYyNiAyLjM2OGwuODcyLS40MDRhMTAuMyAxMC4zIDAgMCAwLTEuNjM2LTIuODI1IiAvPgo8L3N2Zz4K"
+        },
+        {
           "id": "regex101",
           "name": "Regex101",
           "url": "https://regex101.com",
