@@ -57,6 +57,27 @@ export const mockData = {
       "order": 2,
       "sites": [
         {
+          "id": "site-1789751470828",
+          "name": "CloudFlare Ai",
+          "url": "https://cfai.xwgt.xyz/",
+          "description": "私人部署的AI平台",
+          "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPgoJPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9IiNmMzgwMjAiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTE1Ljk5IDIuNDQ0aC0yLjEzNXY0LjY5bDIuMTM0LjAwNnptLTQuOTMgMi43MDlsMi4yMjQgMi4yMjVMMTEuNzcgOC44OEw5LjU1MiA2LjY2MmwxLjUxLTEuNTF6TTYuODQ1IDkuNDU1aDQuNjk2bC0uMDA3IDIuMTMzaC00LjY5em0yLjcxIDQuOTI4bDIuMjIyLTIuMjI0bDEuNTA1IDEuNTE0bC0yLjIxOCAyLjIxN2wtMS41MS0xLjUwOXptNC4zIDQuMjE2di00LjY5NmwyLjEzNC4wMDd2NC42OWgtMi4xMzR6bTQuOTI4LTIuNzA2bC0yLjIyNS0yLjIyNWwxLjUxNC0xLjUwNGwyLjIyIDIuMjJsLTEuNTEgMS41MWguMDAxek0yMyAxMS41ODhoLTQuNjk2bC4wMDctMi4xMzNIMjN6bS0yLjcwOS00LjkyNmwtMi4yMjMgMi4yMjNsLTEuNTA0LTEuNTEzbDIuMjItMi4yMnpNMy4yIDIuOTI2VjQuMTNIMS45OTR2MS45MjlIMy4ydjEuMjA0aDEuOTI3VjYuMDU5aDEuMjA0VjQuMTMxSDUuMTI3VjIuOTI2em0wIDE4LjgzNXYtMi4ySDF2LTEuOTI3aDIuMnYtMi4xOThoMS45Mjd2Mi4xOThoMi4ydjEuOTI3aC0yLjJ2Mi4yeiIgY2xpcC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4K"
+        },
+        {
+          "id": "site-1789751527548",
+          "name": "DeepSeek",
+          "url": "https://deepseek.xwgt.xyz/",
+          "description": "盗版DeepSeek",
+          "icon": "https://www.faviconextractor.com/favicon/deepseek.xwgt.xyz"
+        },
+        {
+          "id": "site-1789751587275",
+          "name": "DeepSeek Harness",
+          "url": "https://harness.xwgt.xyz/",
+          "description": "盗版DeepSeek Harness",
+          "icon": "https://www.faviconextractor.com/favicon/harness.xwgt.xyz"
+        },
+        {
           "id": "chatgpt",
           "name": "ChatGPT",
           "url": "https://chat.openai.com",
