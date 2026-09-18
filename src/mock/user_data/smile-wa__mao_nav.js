@@ -224,6 +224,20 @@ export const mockData = {
           "url": "https://my.dnshe.com/",
           "description": "二级免费域名注册",
           "icon": "https://www.faviconextractor.com/favicon/my.dnshe.com"
+        },
+        {
+          "id": "site-1789752835290",
+          "name": "SupaBase",
+          "url": "https://supabase.com/",
+          "description": "免费数据库",
+          "icon": "https://www.faviconextractor.com/favicon/supabase.com"
+        },
+        {
+          "id": "site-1789752919866",
+          "name": "Neon",
+          "url": "https://console.neon.tech/",
+          "description": "数据库平台",
+          "icon": "https://www.faviconextractor.com/favicon/console.neon.tech"
         }
       ]
     },
@@ -472,7 +486,7 @@ export const mockData = {
       ]
     }
   ],
-  "title": "云中书柜",
+  "title": "猫猫导航🐱",
   "search": "bing",
   "icp": ""
 }
