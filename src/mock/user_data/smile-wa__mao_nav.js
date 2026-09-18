@@ -92,6 +92,20 @@ export const mockData = {
           "icon": "https://www.faviconextractor.com/favicon/chat.deepseek.com"
         },
         {
+          "id": "site-1789752031843",
+          "name": "智谱清言",
+          "url": "https://chatglm.cn",
+          "description": "智谱 AI（也称 Z.AI）开发的大型语言模型",
+          "icon": "https://www.faviconextractor.com/favicon/chatglm.cn"
+        },
+        {
+          "id": "site-1789751844067",
+          "name": "千问",
+          "url": "https://www.qianwen.com/",
+          "description": "阿里云旗下智能AI平台",
+          "icon": "https://www.faviconextractor.com/favicon/www.qianwen.com"
+        },
+        {
           "id": "chatgpt",
           "name": "ChatGPT",
           "url": "https://chat.openai.com",
