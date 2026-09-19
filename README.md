@@ -1,4 +1,4 @@
-# 🐱 猫猫导航 (Mao Nav)
+# 云中书柜 
 
 > 一个简洁美观的个人导航网站，支持分类管理和自定义收藏夹
 
@@ -10,7 +10,7 @@
 [![EdgeOne](https://img.shields.io/badge/Deploy-EdgeOne%20Pages-006EFF)](https://edgeone.ai/pages/)
 
 ## 效果预览
-示例站点：[猫猫导航](https://nav.maodeyu.fun)
+示例站点：[云中书柜](https://nav.xwgt.xyz)
 
 ![](preview.png)
 
@@ -29,7 +29,7 @@
 
 ## 🚀 快速开始
 
-图文教程：[猫猫导航部署教程](https://blog.maodeyu.fun/2025/07/16/nav_mao/)
+图文教程：[部署教程](https://blog.maodeyu.fun/2025/07/16/nav_mao/)
 
 > 💬 部署遇到问题？欢迎加入 QQ 交流群：**494775899**。
 
