@@ -36,7 +36,49 @@
   --section-gap: 160px;
 }
 
-/* 暗色模式 CSS Variables */
+/* ============================================================
+   导航站专用设计令牌
+   ============================================================ */
+:root {
+  /* 背景 */
+  --nav-bg: #f5f7fa;
+  --nav-sidebar: #2c3e50;
+  --nav-sidebar-text: #ecf0f1;
+  --nav-sidebar-sub: #bdc3c7;
+  --nav-sidebar-hover: rgba(255, 255, 255, 0.08);
+  --nav-sidebar-border: rgba(255, 255, 255, 0.1);
+
+  /* 卡片与内容 */
+  --nav-card: #ffffff;
+  --nav-card-hover: #ffffff;
+  --nav-header: #ffffff;
+  --nav-border: #e9ecef;
+  --nav-text: #2c3e50;
+  --nav-text-sub: #7f8c8d;
+  --nav-text-faint: #95a5a6;
+
+  /* 主色 */
+  --nav-primary: #3498db;
+  --nav-primary-hover: #2980b9;
+  --nav-primary-soft: rgba(52, 152, 219, 0.08);
+  --nav-primary-glow: rgba(52, 152, 219, 0.18);
+
+  /* 阴影与圆角 */
+  --nav-shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.04);
+  --nav-shadow-md: 0 2px 10px rgba(0, 0, 0, 0.06);
+  --nav-shadow-lg: 0 10px 28px rgba(52, 152, 219, 0.15);
+
+  --nav-radius-sm: 6px;
+  --nav-radius: 10px;
+  --nav-radius-lg: 14px;
+  --nav-radius-full: 999px;
+
+  /* 动效 */
+  --nav-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --nav-dur: 0.18s;
+}
+
+/* 暗色模式：用 .dark 类，与组件中的 .dark 选择器保持一致 */
 .dark {
   --color-background: var(--vt-c-black);
   --color-background-soft: var(--vt-c-black-soft);
@@ -47,10 +89,35 @@
 
   --color-heading: var(--vt-c-text-dark-1);
   --color-text: var(--vt-c-text-dark-2);
+
+  /* 导航站暗色令牌 */
+  --nav-bg: #1a1a1a;
+  --nav-sidebar: #1e293b;
+  --nav-sidebar-text: #e2e8f0;
+  --nav-sidebar-sub: #94a3b8;
+  --nav-sidebar-hover: rgba(255, 255, 255, 0.08);
+  --nav-sidebar-border: #334155;
+
+  --nav-card: #374151;
+  --nav-card-hover: #3f4a5a;
+  --nav-header: #1e293b;
+  --nav-border: #4b5563;
+  --nav-text: #e2e8f0;
+  --nav-text-sub: #9ca3af;
+  --nav-text-faint: #6b7280;
+
+  --nav-primary: #60a5fa;
+  --nav-primary-hover: #3b82f6;
+  --nav-primary-soft: rgba(96, 165, 250, 0.12);
+  --nav-primary-glow: rgba(96, 165, 250, 0.22);
+
+  --nav-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --nav-shadow-md: 0 2px 10px rgba(0, 0, 0, 0.35);
+  --nav-shadow-lg: 0 10px 28px rgba(0, 0, 0, 0.5);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not(.light) {
     --color-background: var(--vt-c-black);
     --color-background-soft: var(--vt-c-black-soft);
     --color-background-mute: var(--vt-c-black-mute);
@@ -60,6 +127,26 @@
 
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
+
+    --nav-bg: #1a1a1a;
+    --nav-sidebar: #1e293b;
+    --nav-sidebar-text: #e2e8f0;
+    --nav-sidebar-sub: #94a3b8;
+    --nav-sidebar-hover: rgba(255, 255, 255, 0.08);
+    --nav-sidebar-border: #334155;
+
+    --nav-card: #374151;
+    --nav-card-hover: #3f4a5a;
+    --nav-header: #1e293b;
+    --nav-border: #4b5563;
+    --nav-text: #e2e8f0;
+    --nav-text-sub: #9ca3af;
+    --nav-text-faint: #6b7280;
+
+    --nav-primary: #60a5fa;
+    --nav-primary-hover: #3b82f6;
+    --nav-primary-soft: rgba(96, 165, 250, 0.12);
+    --nav-primary-glow: rgba(96, 165, 250, 0.22);
   }
 }
 
@@ -76,8 +163,8 @@ body {
   color: var(--color-text);
   background: var(--color-background);
   transition:
-    color 0.5s,
-    background-color 0.5s;
+    color 0.3s,
+    background-color 0.3s;
   line-height: 1.6;
   font-family:
     Inter,
@@ -91,9 +178,28 @@ body {
     'Fira Sans',
     'Droid Sans',
     'Helvetica Neue',
+    'PingFang SC',
+    'Hiragino Sans GB',
+    'Microsoft YaHei',
     sans-serif;
   font-size: 15px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(127, 140, 141, 0.35);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(127, 140, 141, 0.6);
 }
