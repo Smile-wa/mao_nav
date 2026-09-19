@@ -33,13 +33,13 @@
       <!-- Logo区域 -->
       <div class="logo-section">
         <img src="/logo.png" alt="logo" class="logo" />
-        <h1 class="site-title">{{ title || '猫猫导航' }}</h1>
+        <h1 class="site-title">{{ title || '云中书柜' }}</h1>
       </div>
 
       <!-- 分类导航 -->
       <nav class="category-nav">
         <h2 class="nav-title">分类导航</h2>
-                <ul class="category-list">
+        <ul class="category-list">
           <li
             v-for="category in categories"
             :key="category.id"
@@ -55,7 +55,7 @@
       <!-- 左侧边栏底部信息 -->
       <div class="sidebar-footer">
         <a
-          href="https://github.com/maodeyu180/mao_nav"
+          href="https://github.com/Smile-wa/My-Nav"
           target="_blank"
           rel="noopener noreferrer"
           class="github-link"
@@ -64,14 +64,14 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
           </svg>
-          <span>开源不易，Star一下吧！⭐</span>
+          <span>云中书柜,一键收藏、智能整理、随时取阅。</span>
         </a>
       </div>
     </aside>
 
     <!-- 右侧主内容区 -->
     <main class="main-content">
-                  <!-- 顶部搜索栏 -->
+      <!-- 顶部搜索栏 -->
       <header class="search-header">
         <div class="search-container">
           <div class="search-engine-selector">
@@ -118,7 +118,7 @@
             </div>
             <button class="close-btn" @click="closeMobileMenu">×</button>
           </div>
-                    <ul class="mobile-category-list">
+          <ul class="mobile-category-list">
             <li
               v-for="category in categories"
               :key="category.id"
@@ -149,7 +149,7 @@
           <button @click="fetchCategories" class="retry-btn">重试</button>
         </div>
 
-                <!-- 分类内容 -->
+        <!-- 分类内容 -->
         <div v-else class="categories-container">
           <section
             v-for="category in categories"
@@ -181,7 +181,6 @@
               </a>
             </div>
           </section>
-
         </div>
       </div>
 
@@ -412,42 +411,42 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* 锁定界面样式 */
+/* ============================================================
+   锁定界面
+   ============================================================ */
 .lock-container {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #2c3e50;
+  background: var(--nav-sidebar);
   padding: 20px;
   z-index: 9999;
 }
 
 .lock-box {
-  background: white;
+  background: var(--nav-card);
+  color: var(--nav-text);
   padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  border-radius: var(--nav-radius-lg);
+  box-shadow: var(--nav-shadow-lg);
   width: 100%;
   max-width: 400px;
   text-align: center;
 }
 
 .lock-box h1 {
-  color: #2d3748;
+  color: var(--nav-text);
   margin-bottom: 8px;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 600;
 }
 
 .lock-description {
-  color: #718096;
+  color: var(--nav-text-sub);
   margin-bottom: 30px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .lock-box .form-group {
@@ -458,7 +457,7 @@ onUnmounted(() => {
 .lock-box .form-group label {
   display: block;
   margin-bottom: 8px;
-  color: #4a5568;
+  color: var(--nav-text-sub);
   font-weight: 500;
   font-size: 14px;
 }
@@ -466,36 +465,39 @@ onUnmounted(() => {
 .lock-box .form-input {
   width: 100%;
   padding: 12px 16px;
-  border: 2px solid #e2e8f0;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  background: #fff;
+  border: 1px solid var(--nav-border);
+  border-radius: var(--nav-radius-sm);
+  font-size: 15px;
+  transition: border-color var(--nav-dur) var(--nav-ease),
+              box-shadow var(--nav-dur) var(--nav-ease);
+  background: var(--nav-card);
+  color: var(--nav-text);
 }
 
 .lock-box .form-input:focus {
   outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  border-color: var(--nav-primary);
+  box-shadow: 0 0 0 3px var(--nav-primary-glow);
 }
 
 .unlock-btn {
   width: 100%;
   padding: 12px 24px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--nav-primary);
   color: white;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: var(--nav-radius-sm);
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color var(--nav-dur) var(--nav-ease),
+              transform var(--nav-dur) var(--nav-ease);
   margin-top: 10px;
 }
 
 .unlock-btn:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+  background: var(--nav-primary-hover);
+  transform: translateY(-1px);
 }
 
 .unlock-btn:disabled {
@@ -507,135 +509,147 @@ onUnmounted(() => {
 .lock-box .error-message {
   margin-top: 15px;
   padding: 12px;
-  background: #fed7d7;
-  color: #c53030;
-  border-radius: 8px;
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+  border-radius: var(--nav-radius-sm);
   font-size: 14px;
-  border: 1px solid #feb2b2;
+  border: 1px solid rgba(231, 76, 60, 0.25);
 }
 
+/* ============================================================
+   页面骨架
+   ============================================================ */
 .nav-home {
   display: flex;
   min-height: 100vh;
-  background-color: #f5f7fa;
+  background-color: var(--nav-bg);
+  color: var(--nav-text);
+  transition: background-color var(--nav-dur) var(--nav-ease);
 }
 
-/* 左侧边栏样式 */
+/* ============================================================
+   左侧边栏
+   ============================================================ */
 .sidebar {
-  width: 280px;
-  background-color: #2c3e50;
-  color: white;
+  width: 260px;
+  background-color: var(--nav-sidebar);
+  color: var(--nav-sidebar-text);
   padding: 0;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid var(--nav-sidebar-border);
   height: 100vh;
   overflow: hidden;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  transition: background-color var(--nav-dur) var(--nav-ease);
 }
 
 .logo-section {
   display: flex;
   align-items: center;
-  padding-left: 20px;
-  padding-top: 13px;
-  padding-bottom: 13px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--nav-sidebar-border);
 }
 
 .logo {
-  width: 55px;
-  height: 55px;
-  border-radius: 12px;
-  margin-right: 15px;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  margin-right: 12px;
 }
 
 .site-title {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   margin: 0;
-  color: white;
+  color: var(--nav-sidebar-text);
+  letter-spacing: -0.01em;
 }
 
 .category-nav {
-  padding: 20px 0;
-  height: calc(100vh - 180px); /* 为底部留出空间 */
+  padding: 16px 12px;
+  flex: 1;
   overflow-y: auto;
 }
 
 .nav-title {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 600;
-  margin: 0 20px 15px;
-  color: #bdc3c7;
+  margin: 0 8px 10px;
+  color: var(--nav-sidebar-sub);
   text-transform: uppercase;
   letter-spacing: 1px;
+  opacity: 0.75;
 }
 
 .category-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .category-item {
   display: flex;
   align-items: center;
-  padding: 12px 20px;
+  padding: 9px 12px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
+  border-radius: var(--nav-radius-sm);
+  transition: background-color var(--nav-dur) var(--nav-ease),
+              color var(--nav-dur) var(--nav-ease);
 }
 
 .category-item:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: inset 4px 0 0 #3498db;
+  background-color: var(--nav-sidebar-hover);
 }
 
 .category-icon {
-  font-size: 18px;
-  margin-right: 12px;
+  font-size: 16px;
+  margin-right: 10px;
   width: 20px;
   text-align: center;
+  line-height: 1;
 }
 
 .category-name {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
 }
 
-/* 左侧边栏底部 */
+/* 侧边栏底部 */
 .sidebar-footer {
-  padding: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: auto;
+  padding: 14px 16px;
+  border-top: 1px solid var(--nav-sidebar-border);
 }
 
 .github-link {
   display: flex;
   align-items: center;
-  color: #bdc3c7;
+  gap: 8px;
+  color: var(--nav-sidebar-sub);
   text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: var(--nav-radius-sm);
+  transition: background-color var(--nav-dur) var(--nav-ease),
+              color var(--nav-dur) var(--nav-ease);
+  font-size: 12px;
+  line-height: 1.4;
 }
 
 .github-link:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  transform: translateY(-1px);
+  background: var(--nav-sidebar-hover);
+  color: var(--nav-sidebar-text);
 }
 
 .github-link svg {
-  margin-right: 8px;
-  transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
-.github-link:hover svg {
-  transform: scale(1.1);
-}
-
-/* 右侧主内容区样式 */
+/* ============================================================
+   右侧主内容区
+   ============================================================ */
 .main-content {
   flex: 1;
   display: flex;
@@ -645,702 +659,5 @@ onUnmounted(() => {
 }
 
 .search-header {
-  background: white;
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.search-container {
-  display: flex;
-  max-width: 600px;
-  margin: 0 auto;
-  gap: 0;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  flex: 1;
-}
-
-@media (max-width: 768px) {
-  .search-container {
-    margin: 0;
-    max-width: none;
-  }
-}
-
-.search-engine-selector {
-  position: relative;
-  display: flex;
-  align-items: center;
-  background: #f8f9fa;
-  border-right: 1px solid #e9ecef;
-  transition: background-color 0.2s ease;
-}
-
-.search-engine-selector:hover {
-  background: #e9ecef;
-}
-
-.engine-logo {
-  width: 24px;
-  height: 24px;
-  margin: 8px;
-  object-fit: contain;
-  pointer-events: none;
-  border-radius: 4px;
-}
-
-.engine-select {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background: transparent;
-}
-
-.search-input {
-  flex: 1;
-  border: none;
-  padding: 12px 16px;
-  font-size: 16px;
-  outline: none;
-  background: white;
-}
-
-.search-input::placeholder {
-  color: #95a5a6;
-}
-
-/* 移动端菜单按钮 */
-.mobile-menu-btn {
-  display: none;
-  background: none;
-  border: none;
-  color: #2c3e50;
-  cursor: pointer;
-  padding: 8px;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-
-.mobile-menu-btn:hover {
-  background: #f8f9fa;
-}
-
-/* 移动端菜单 */
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 240px;
-  height: 100vh;
-  background: white;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 1001;
-  transition: right 0.3s ease;
-  overflow-y: auto;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.mobile-menu.active {
-  right: 0;
-}
-
-.mobile-menu-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  border-bottom: 1px solid #e9ecef;
-  background: #2c3e50;
-  color: white;
-  flex-shrink: 0;
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.mobile-menu-header h3 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.header-github-icon {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  opacity: 0.8;
-}
-
-.header-github-icon:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-.close-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 0;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-
-.close-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.mobile-category-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex: 1;
-  overflow-y: auto;
-  padding-bottom: 160px; /* 增加底部内边距确保最后一项完全可见 */
-}
-
-.mobile-category-item {
-  display: flex;
-  align-items: center;
-  padding: 16px 20px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  border-bottom: 1px solid #f8f9fa;
-}
-
-.mobile-category-item:hover {
-  background: #f8f9fa;
-}
-
-.mobile-category-item .category-icon {
-  font-size: 20px;
-  margin-right: 12px;
-  width: 24px;
-  text-align: center;
-}
-
-.mobile-category-item .category-name {
-  font-size: 16px;
-  font-weight: 500;
-  color: #2c3e50;
-}
-
-
-
-/* 移动端菜单遮罩 */
-.mobile-menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.mobile-menu-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* 内容区域样式 */
-.content-area {
-  flex: 1;
-  padding: 30px;
-  padding-bottom: 400px;
-  overflow-y: auto;
-}
-
-.loading, .error {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 200px;
-  color: #7f8c8d;
-}
-
-.loading-spinner {
-  width: 40px;
-  height: 40px;
-  border: 4px solid #ecf0f1;
-  border-top: 4px solid #3498db;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.retry-btn {
-  margin-top: 10px;
-  padding: 8px 16px;
-  background: #3498db;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.categories-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.category-section {
-  margin-bottom: 50px;
-}
-
-.category-title {
-  font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 25px;
-  color: #2c3e50;
-  display: flex;
-  align-items: center;
-}
-
-.category-title .category-icon {
-  font-size: 32px;
-  margin-right: 16px;
-}
-
-.category-title .category-name {
-  margin-left: 10px;
-  font-size: 26px;
-}
-
-.sites-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.site-card {
-  display: flex;
-  align-items: center;
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.3s ease;
-  border: 1px solid #e9ecef;
-  position: relative;
-  overflow: hidden;
-}
-
-.site-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(155, 89, 182, 0.1));
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.site-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.site-card:hover::before {
-  opacity: 1;
-}
-
-.site-icon {
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
-  flex-shrink: 0;
-  margin-right: 16px;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #f8f9fa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-}
-
-.site-icon img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-}
-
-.site-info {
-  flex: 1;
-  min-width: 0;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-}
-
-.site-name {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0 0 5px 0;
-  color: #2c3e50;
-}
-
-.site-description {
-  font-size: 14px;
-  color: #7f8c8d;
-  margin: 0;
-  line-height: 1.4;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* 备案信息 */
-.icp-footer {
-  flex-shrink: 0;
-  padding: 10px 20px;
-  text-align: center;
-  background: white;
-  border-top: 1px solid #e9ecef;
-  font-size: 13px;
-}
-
-.icp-footer a {
-  color: #7f8c8d;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.icp-footer a:hover {
-  color: #3498db;
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-  .nav-home {
-    flex-direction: column;
-    height: 100vh;
-    height: 100svh; /* 使用动态视口高度 */
-    overflow: hidden;
-  }
-
-  .sidebar {
-    display: none; /* 在移动端隐藏左侧边栏 */
-  }
-
-  .main-content {
-    flex: 1;
-    height: 100vh;
-    height: 100svh; /* 使用动态视口高度，更准确 */
-    margin-left: 0;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-
-  .search-header {
-    padding: 15px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 500;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .content-area {
-    flex: 1;
-    padding: 20px 15px;
-    padding-top: 100px; /* 为固定的搜索框留出空间 */
-    padding-bottom: 300px; /* 增加底部padding确保内容可以完全滚动 */
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch; /* iOS平滑滚动 */
-  }
-
-  .mobile-menu-btn {
-    display: block; /* 在移动端显示菜单按钮 */
-    flex-shrink: 0;
-  }
-
-  .sites-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-
-  .site-card {
-    padding: 12px;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .site-card .site-icon {
-    margin-right: 0;
-    margin-bottom: 8px;
-  }
-
-  .site-card .site-name {
-    font-size: 15px;
-  }
-
-  .site-card .site-description {
-    font-size: 12px;
-  }
-
-  .category-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-
-  .category-title .category-icon {
-    font-size: 28px;
-    margin-right: 12px;
-  }
-
-  .category-title .category-name {
-    font-size: 22px;
-  }
-
-  .icp-footer {
-    padding: 8px 15px;
-    font-size: 12px;
-  }
-}
-
-/* 主题切换按钮样式 */
-.theme-toggle-btn {
-  background: none;
-  border: none;
-  color: #2c3e50;
-  cursor: pointer;
-  padding: 8px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-}
-
-.theme-toggle-btn:hover {
-  background: #f8f9fa;
-  transform: scale(1.1);
-}
-
-/* 暗色模式样式 */
-.dark .nav-home {
-  background-color: #1a1a1a;
-}
-
-.dark .sidebar {
-  background-color: #1e293b;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.dark .search-header {
-  background: #1e293b;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.dark .theme-toggle-btn {
-  color: #e2e8f0;
-}
-
-.dark .theme-toggle-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.dark .mobile-menu-btn {
-  color: #e2e8f0;
-}
-
-.dark .mobile-menu-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.dark .search-container {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.dark .search-engine-selector {
-  background: #374151;
-  border-right: 1px solid #4b5563;
-}
-
-.dark .search-engine-selector:hover {
-  background: #4b5563;
-}
-
-.dark .search-input {
-  background: #374151;
-  color: #e2e8f0;
-  border: none;
-}
-
-.dark .search-input::placeholder {
-  color: #9ca3af;
-}
-
-.dark .engine-select {
-  background: #374151;
-  color: #e2e8f0;
-}
-
-.dark .engine-select option {
-  background: #374151;
-  color: #e2e8f0;
-}
-
-.dark .content-area {
-  background: #1a1a1a;
-}
-
-.dark .site-card {
-  background: #374151;
-  border: 1px solid #4b5563;
-  color: #e2e8f0;
-}
-
-.dark .site-card:hover {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-}
-
-.dark .site-card::before {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(139, 92, 246, 0.15));
-}
-
-.dark .site-name {
-  color: #e2e8f0;
-}
-
-.dark .site-description {
-  color: #9ca3af;
-}
-
-.dark .site-icon {
-  background: #4b5563;
-}
-
-.dark .category-title {
-  color: #e2e8f0;
-}
-
-.dark .mobile-menu {
-  background: #1e293b;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.dark .mobile-category-item {
-  border-bottom: 1px solid #374151;
-}
-
-.dark .mobile-category-item:hover {
-  background: #374151;
-}
-
-.dark .mobile-category-item .category-name {
-  color: #e2e8f0;
-}
-
-.dark .icp-footer {
-  background: #1e293b;
-  border-top-color: #374151;
-}
-
-.dark .icp-footer a {
-  color: #9ca3af;
-}
-
-.dark .icp-footer a:hover {
-  color: #60a5fa;
-}
-
-.dark .loading,
-.dark .error {
-  color: #9ca3af;
-}
-
-.dark .retry-btn {
-  background: #3b82f6;
-  color: white;
-}
-
-.dark .retry-btn:hover {
-  background: #2563eb;
-}
-
-/* 锁定界面暗色模式 */
-.dark .lock-container {
-  background: #0f172a;
-}
-
-.dark .lock-box {
-  background: #1e293b;
-  color: #e2e8f0;
-}
-
-.dark .lock-box h1 {
-  color: #e2e8f0;
-}
-
-.dark .lock-description {
-  color: #94a3b8;
-}
-
-.dark .lock-box .form-group label {
-  color: #cbd5e1;
-}
-
-.dark .lock-box .form-input {
-  background: #374151;
-  border: 2px solid #4b5563;
-  color: #e2e8f0;
-}
-
-.dark .lock-box .form-input:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-}
-
-.dark .unlock-btn {
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-}
-
-.dark .unlock-btn:hover:not(:disabled) {
-  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
-}
-</style>
+  background: var(--nav-header);
+  padding: 16px 
